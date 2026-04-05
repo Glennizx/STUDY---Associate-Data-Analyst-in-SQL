@@ -1,0 +1,84 @@
+Notes:
+Intermediate SQL
+SQL (Structured Query Language): A programming language used to query, manage, and manipulate data in
+relational databases.
+
+
+PostgreSQL: A free, open-source relational database system often used in SQL learning and practice.
+
+
+Films Database: A sample database used in the course, containing tables such as films, people, reviews, and
+roles.
+
+
+Null Value: A marker in SQL indicating missing or unknown data in a record.
+
+
+Wildcard Character: Symbols and ) used with the operator to represent one or more characters in
+string matching.
+
+
+Holywell’s Style Guide: A recommended set of conventions for writing SQL code, including indentation,
+aliasing, and capitalization.
+
+
+Alias: A temporary name assigned to a table or column using the keyword.
+
+
+COUNT(*): A function that counts all rows in a table, including those with null values.
+
+
+COUNT(column_name): A function that counts non-null values in a specific column.
+
+
+DISTINCT: A keyword used to return only unique values from a column.
+
+
+LIMIT: A keyword used in PostgreSQL to restrict the number of rows returned by a query.
+
+
+ORDER BY: A keyword used to sort query results by one or more columns.
+
+
+ASC / DESC: Options for ordering results in ascending or descending order.
+
+
+WHERE Clause: A statement used to filter records that meet specific conditions.
+
+
+HAVING Clause: A statement used to filter aggregated data, often in combination with .
+
+
+GROUP BY: A clause that groups rows sharing a property so aggregate functions can be applied.
+
+
+ROUND(): A function that rounds numeric values to a specified number of decimal places.
+
+
+Aggregate Functions: Functions that summarize values, such as , , , .
+
+
+Arithmetic Operators: Symbols used in SQL calculations ( , , , ).
+
+
+BETWEEN: A keyword used to filter results within a given range of values.
+
+
+IN: A keyword used to filter records by checking if values match any in a specified list.
+
+
+LIKE / NOT LIKE: Keywords used for pattern matching in text, often with wildcards.
+
+
+IS NULL / IS NOT NULL: Operators used to test for missing values in a dataset.
+
+
+Query Execution Order: The sequence in which SQL statements are executed (e.g., → →
+ → → → → ).
+(% _ LIKE
+AS
+GROUP BY
+SUM() AVG() MIN() MAX()
++ - * /
+FROM WHERE
+GROUP BY HAVING SELECT ORDER BY LIMIT
