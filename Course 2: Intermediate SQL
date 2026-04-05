@@ -1,0 +1,16 @@
+#1. Calculate the smallest order amount from a table named "orders"
+------------------------------------------------------------------
+SELECT MIN(amount) AS Minimum_order_amount
+FROM orders;
+
+
+
+
+
+------------------------------------------------------------------
+
+#2. Write SQL to find the total number of trips from the trips table
+-------------------------------------------------------------------
+
+
+
