@@ -1,0 +1,10 @@
+# Performed basic query on SQL
+
+# 1. Selects all columns from a table named sales_data
+
+SELECT *
+FROM sales_data
+
+
+# 2. Selects all distinct values
+SELECT
