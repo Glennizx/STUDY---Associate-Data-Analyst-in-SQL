@@ -11,6 +11,8 @@ FROM orders;
 
 #2. Write SQL to find the total number of trips from the trips table
 -------------------------------------------------------------------
+SELECT COUNT(trip_id) AS total_trips
+FROM trips;
 
 
 
