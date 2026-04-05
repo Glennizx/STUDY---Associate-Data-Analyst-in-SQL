@@ -3,16 +3,23 @@
 SELECT MIN(amount) AS Minimum_order_amount
 FROM orders;
 
-
-
-
-
 ------------------------------------------------------------------
-
 #2. Write SQL to find the total number of trips from the trips table
 -------------------------------------------------------------------
 SELECT COUNT(trip_id) AS total_trips
 FROM trips;
 
+-------------------------------------------------------------------
+#3. Count unique riders, trips, driver, total fare and average fare
+-------------------------------------------------------------------
+SELECT COUNT(trip_id) AS number_of_trips,
+       COUNT(DISTINCT rider_id) AS number_of_riders,
+       COUNT(DISTINCT driver_id) AS number_of_driver,
+       SUM(fare) AS total_fare,
+       AVG(fare) AS average_fare
+
+FROM trips;
+
+--------------------------------------------------------------------
 
 
