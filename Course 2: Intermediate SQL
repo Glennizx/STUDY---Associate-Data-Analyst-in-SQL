@@ -258,20 +258,37 @@ WHERE release_year >= 2000;
 -------------------------------------------------------
 SELECT AVG(gross) AS avg_gross_A
 FROM films
-WHERE titl LIKE 'A%';
+WHERE title LIKE 'A%';
 
 -------------------------------------------------------
-#35.Calculate the average facebook_likes to one decimal place and assign to the alias, avg_facebook_likes.
+#35. Calculate the average facebook_likes to one decimal place and assign to the alias, avg_facebook_likes.
 -------------------------------------------------------
 SELECT ROUND(AVG(facebook_likes), 1) AS avg_facebook_likes
 FROM reviews;
 
 -------------------------------------------------------
-#36.Calculate the average budget from the films table, aliased as avg_budget_thousands, and round to the nearest thousand.
+#36. Calculate the average budget from the films table, aliased as avg_budget_thousands, and round to the nearest thousand.
 -------------------------------------------------------
 SELECT ROUND(AVG(budget), -3) AS avg_budget_thousands
 FROM films;
 
+-------------------------------------------------------
+#37. Calculate the title and duration_hours from films
+-------------------------------------------------------
+SELECT title, duration/60.0 AS duration_hours
+FROM films;
+
+-------------------------------------------------------
+38. Calculate the percentage of people who are no longer alive and alias the result as percentage_dead.
+-------------------------------------------------------
+SELECT COUNT(deathdate) * 100.0 / COUNT(*) AS percentage_dead
+FROM people;
+
+-------------------------------------------------------
+38. Find the number of decades in the films table
+-------------------------------------------------------
+SELECT (MAX(release_year) - MIN(release_year)) / 10.0 AS number_of_decades
+FROM films;
 
 
 
