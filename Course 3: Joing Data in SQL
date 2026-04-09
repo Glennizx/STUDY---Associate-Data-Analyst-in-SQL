@@ -154,9 +154,14 @@ GROUP BY region
 ORDER BY avg_gdp DESC
 LIMIT 10;
 -------------------------------------------------------------------
-#11.
+#15. Complete the code to perform an INNER JOIN of countries AS c with languages AS l using the code field to obtain the languages currently spoken in the two countries.
 -------------------------------------------------------------------
-
+SELECT c.name AS country, l.name AS language
+FROM countries AS c
+INNER JOIN languages AS l
+using(code)
+WHERE c.code IN ('PAK','IND')
+	AND l.code in ('PAK','IND');
 -------------------------------------------------------------------
 #11.
 -------------------------------------------------------------------
