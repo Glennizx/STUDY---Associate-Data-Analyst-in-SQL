@@ -261,10 +261,51 @@ WHERE title LIKE '%GOLD%';
 SELECT to_tsvector(description)
 FROM film;
 
-/*
+/* Exercise 28:
 Select the title and description columns from the film table.
 Perform a full-text search on the title column for the word elf.
 */
 SELECT title, description
 FROM film
 WHERE to_tsvector(title) @@ to_tsquery('elf');
+
+/* Exercise 29:
+Create a new enumerated data type called compass_position.
+Use the four positions of a compass as the values.
+*/
+-- Create an enumerated data type, compass_position
+CREATE TYPE compass_position AS ENUM (
+  	-- Use the four cardinal directions
+  	'North', 
+  	'East',
+  	'South', 
+  	'West'
+);
+
+-- Exercise 30:
+-- Verify that the new data type has been created by looking in the pg_type system table.
+CREATE TYPE compass_position AS ENUM (
+
+  	'North', 
+  	'South',
+  	'East', 
+  	'West'
+);
+SELECT *
+FROM pg_type
+WHERE typname='compass_position';
+
+/* Exercise 31:
+Select the column_name, data_type, udt_name.
+Filter for the rating column in the film table.
+*/
+SELECT column_name, data_type, udt_name
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE table_name ='film' AND column_name='rating';
+
+/* Exercise 32:
+Select all columns from the pg_type table where the type name is equal to mpaa_rating.
+*/
+SELECT *
+FROM pg_type
+WHERE typname='mpaa_rating'
